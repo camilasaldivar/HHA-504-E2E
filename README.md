@@ -57,8 +57,16 @@ HHA 504-E2E
    
     ###will display 'actively running)
  
+#Change bin address to 0.0.0.0
 
- #Start MySQL
+    #sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+
+#Restart MySQL to make sure it was updated 
+
+    #sudo service mysql restart
+ 
+ 
+#Start MySQL
    
     ###Sudo MySQL
 
@@ -88,9 +96,24 @@ HHA 504-E2E
 #Create a dump (.sql) file
    
     ###mysqldump -u DBA -p e2e > e2e_dump.sql
+    
+    ###sudo mysqldump-apt e2e>e2e_dump.sql
+   
+    ### the command ls will show the dump file created
+
+#Launch a second ec2 instance using AWS or Azure
+  
+    ### Open Ports 22 and 3306
+    ###Connect machine in the teminal 
 
 
 #SCP to local Machine 
+   
+    ###scp e2e_dump.sql client@52.170.46.178:/home/client
+    
+    ###On second instanc, input the following command:
+   
+    ###sudo mysql e2e < e2e_dump.sql
 
 
 #Create Trigger
@@ -98,7 +121,7 @@ HHA 504-E2E
     ###See sql file attachment 
 
 
-#Create a hot replica 
+
 
 
 
