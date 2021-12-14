@@ -1,14 +1,14 @@
 HHA 504-E2E
 
-#Steps 
+# Steps 
 
-#Set up and deploy EC2 using a PEM key
-
-
-#Open ports 22 (SSH) and 3306 (MySQL)
+##Set up and deploy EC2 using a PEM key
 
 
-#Connect to the EC2 instance using the terminal -ssh
+##Open ports 22 (SSH) and 3306 (MySQL)
+
+
+##Connect to the EC2 instance using the terminal -ssh
 
 
 #Change directory to downloads (This is where the PEM key is stored)
